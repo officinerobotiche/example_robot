@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>explorer_robot</name>
+  <name>example_robot_ros</name>
   <version>0.0.0</version>
   <description>The explorer_robot package</description>
 
