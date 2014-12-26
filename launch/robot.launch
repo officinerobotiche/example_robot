@@ -1,0 +1,14 @@
+<launch>
+
+  <rosparam command="load" file="$(find explorer_robot)/joystick.yaml" ns="joy" />
+  <param name="robot_description" textfile="$(find explorer_robot)/explorer.urdf" />
+  
+  <!-- LOAD bridge robot -->
+  <group ns="robot">
+      <rosparam command="load" file="$(find explorer_robot)/explorer.yaml" />
+      <node name="robot" pkg="serial_bridge" type="serial_bridge_node" args="/dev/ttyUSB0">
+          <remap from = "/robot/joint_states" to = "/joint_states" />
+      </node>
+  </group>
+ 
+</launch>
