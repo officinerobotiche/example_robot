@@ -1,9 +1,9 @@
 <launch>
-  <param name="robot_description" textfile="$(find example_robot_ros)/explorer.urdf" />
+  <param name="robot_description" textfile="$(find example_robot_ros)/example_robot.urdf" />
   
   <!-- LOAD bridge robot -->
   <group ns="robot">
-      <rosparam command="load" file="$(find example_robot_ros)/explorer.yaml" />
+      <rosparam command="load" file="$(find example_robot_ros)/example_robot.yaml" />
       <node name="robot" pkg="serial_bridge" type="serial_bridge_node" args="/dev/ttyUSB0">
           <remap from = "/robot/joint_states" to = "/joint_states" />
       </node>

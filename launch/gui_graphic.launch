@@ -3,7 +3,7 @@
     <!-- <env name="ROS_MASTER_URI" value="http://ubuntu.local:11311" /> -->
 
     <rosparam command="load" file="$(find example_robot_ros)/explorer.yaml" ns="robot" />
-    <param name="robot_description" textfile="$(find example_robot_ros)/explorer.urdf" />
+    <param name="robot_description" textfile="$(find example_robot_ros)/example_robot.urdf" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
-    <node pkg="rqt_rviz" type="rqt_rviz" name="rqt_rviz" args="-d $(find example_robot_ros)/explorer.rviz"/>
+    <node pkg="rqt_rviz" type="rqt_rviz" name="rqt_rviz" args="-d $(find example_robot_ros)/example_robot.rviz"/>
 </launch>
