@@ -1,6 +1,6 @@
 #example_robot_ros#
 
-This repository contains an example of configuration of a robot based on the uNav board or on the RoboController board ("serial_bridge" package).
+This repository contains an example of configuration of a robot based on the uNav board or on the RoboController board and works with the "serial_bridge" package available at https://github.com/officinerobotiche/serial_bridge
 
 ##Environment setup:##
 
