@@ -9,8 +9,8 @@
       </node>
   </group>
 
-<!--    <group ns="robot_webcam">
+  <group ns="robot_webcam">
 	<node  pkg="usb_cam" name="robot_usb_cam" type="usb_cam_node"/>
-    </group>
- -->
+  </group>
+
 </launch>
