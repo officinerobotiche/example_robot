@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>example_robot_ros</name>
+  <name>ros_example_robot</name>
   <version>0.0.1</version>
   <description>
 	This is an example of configuration of a robotic system based
