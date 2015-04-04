@@ -1,4 +1,4 @@
-#example_robot_ros#
+#ros_example_robot#
 
 This repository contains an example of configuration of a robot based on the uNav board or on the RoboController board and works with the "serial_bridge" package available at https://github.com/officinerobotiche/serial_bridge
 
@@ -17,12 +17,12 @@ $ export | grep ROS
 ```
 Execute the control GUI:
 ```bash
-$ roslaunch example_robot_ros gui_sensor.launch
+$ roslaunch ros_example_robot gui_sensor.launch
 ```
 
 On a different terminal (Ctrl+Alt+t) run the keyboard teleoperation node:
 ```bash
-$ rosrun serial_bridge drive_bridge_node
+$ rosrun ros_serial_bridge drive_bridge_node
 ```
 ###On the Robot###
 On a terminal (Ctrl+Alt+t):
@@ -37,5 +37,5 @@ $ export | grep ROS
 ```
 Execute the robot nodes:
 ```bash
-$ roslaunch example_robot_ros robot.launch
+$ roslaunch ros_example_robot robot.launch
 ```

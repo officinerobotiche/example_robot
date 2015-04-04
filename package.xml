@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>example_robot_ros</name>
+  <name>ros_example_robot</name>
   <version>0.0.1</version>
   <description>
 	This is an example of configuration of a robotic system based
@@ -24,7 +24,7 @@
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
   <!-- <url type="website">http://ros.org/wiki/explorer_robot</url> -->
-  <url type="repository">https://github.com/officinerobotiche/example_robot_ros</url>
+  <url type="repository">https://github.com/officinerobotiche/ros_example_robot</url>
 
 
 
@@ -50,7 +50,7 @@
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <run_depend>usb_cam</run_depend>
-  <run_depend>serial_bridge</run_depend>
+  <run_depend>ros_serial_bridge</run_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
