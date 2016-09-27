@@ -1,0 +1,6 @@
+analyzers:
+  computers:
+    type: GenericAnalyzer
+    path: unav
+    contains: [
+      'motor']
