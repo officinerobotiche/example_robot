@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>example_robot</name>
-  <version>0.6</version>
+  <version>0.6.0</version>
   <description>
 	This is an example of configuration of a robotic system based
 	on the board uNav or the board RoboController.
