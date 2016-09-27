@@ -1,9 +1,14 @@
 #ros_example_robot#
 
-This repository contains an example of configuration of a robot based on the uNav board or on the RoboController board and works with the "serial_bridge" package available at https://github.com/officinerobotiche/serial_bridge
+This repository contains an example of configuration of a robot based on the uNav board or on the RoboController board and works with the [ros_serial_bridge](https://github.com/officinerobotiche/ros_serial_bridge).
+
+##Example robots
+On this list you can see all robots with [ros_serial_bridge](https://github.com/officinerobotiche/ros_serial_bridge) in action
+* [Myzharbot](https://github.com/Myzhar/ros_myzharbot_robot)
+* [4UDE](https://github.com/rbonghi/ros_dude)
 
 ##Environment setup:##
-
+Configuration with roscore run in robot and other node running on PC
 ###On the remote PC###
 On a terminal (Ctrl+Alt+t):
 ```bash
