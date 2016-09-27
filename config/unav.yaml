@@ -1,0 +1,28 @@
+motor_0:
+  bridge: {PWM_dead_zone: 0.0, PWM_frequency: 1, current_gain: 1.0,
+     current_offset: 0.0, h_bridge_enable: 0, volt_gain: 1.0, 
+     volt_offset: 1.0}
+  diagnostic:
+    current: {critical: 0.0, warning: 0.0}
+    temperature: {critical: 0.0, warning: 0.0}
+  emergency: {Bridge_off: 2.0, Slope_time: 1.0, Timeout: 100}
+  encoder: {CPR: 1, channels: 2, position: 1, z_index: 0}
+  pid:
+    current: {Enable: false, Frequency: 1, Kd: 0.0, Ki: 0.0, Kp: 0.0}
+    velocity: {Enable: false, Frequency: 1, Kd: 0.0, Ki: 0.0, Kp: 0.0}
+  ratio: 1.0
+  rotation: 1
+motor_1:
+  bridge: {PWM_dead_zone: 0.0, PWM_frequency: 1, current_gain: 1.0,
+     current_offset: 0.0, h_bridge_enable: 0, volt_gain: 1.0, 
+     volt_offset: 1.0}
+  diagnostic:
+    current: {critical: 0.0, warning: 0.0}
+    temperature: {critical: 0.0, warning: 0.0}
+  emergency: {Bridge_off: 2.0, Slope_time: 1.0, Timeout: 100}
+  encoder: {CPR: 1, channels: 2, position: 1, z_index: 0}
+  pid:
+    current: {Enable: false, Frequency: 1, Kd: 0.0, Ki: 0.0, Kp: 0.0}
+    velocity: {Enable: false, Frequency: 1, Kd: 0.0, Ki: 0.0, Kp: 0.0}
+  ratio: 1.0
+  rotation: 1
