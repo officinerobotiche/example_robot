@@ -1,6 +1,7 @@
+<?xml version="1.0"?>
 <!--
-Copyright (c) 2016, Raffaello Bonghi
-All rights reserved.
+\author   Raffaello Bonghi <raffaello@rnext.it
+\copyright Copyright (c) 2016, Raffaello Bonghi All rights reserved.
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
     * Redistributions of source code must retain the above copyright
@@ -23,9 +24,10 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <launch>
-    <!-- Your script with your URDF file -->
-    <!-- Follow the guide or try with https://github.com/officinerobotiche/example_robot.git file -->
-    <param name="robot_description" file="$(find example_robot)/urdf/myrobot.urdf"/>
+    <!-- Load robot description -->
+    <!-- In this launch file are initialized the /robot_description and 
+    the robot_state_publisher to show all information about the joints. -->
+    <include file="$(find example_robot)/launch/description.launch" />
 
     <!-- ORBus hardware driver -->
     <node pkg="orbus_interface" type="unav_node" name="unav" output="screen">
@@ -41,16 +43,18 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <rosparam command="load" file="$(find example_robot)/config/unav.yaml" />
     </node>
 
-    <!-- Differential controller parameters and basic localization -->
+    <!-- Differential controller parameters -->
+    <!-- In control.yaml you have the configuration for the two ROS controller
+    available in the unav_node: unav_joint_pubblisher and unav_velocity_controller
+    When all parameters all loaded you can spawn with the controller_manager.
+    READ inside the control.yaml to know all parameters -->
     <rosparam command="load" file="$(find example_robot)/config/control.yaml" />
 
-    <!-- Run the controller available in the uNav -->
-    <!-- Follow the demo in https://github.com/officinerobotiche/example_robot.git -->
+    <!-- Launch and running al controller -->
     <node name="base_controller_spawner" pkg="controller_manager" type="spawner" 
             args="unav_joint_publisher unav_velocity_controller --shutdown-timeout 3"/>
 
     <!-- Diagnostic Aggregator -->
-    <!-- Follow the demo in https://github.com/officinerobotiche/example_robot.git -->
     <node pkg="diagnostic_aggregator" type="aggregator_node" name="diagnostic_aggregator">
         <rosparam command="load" file="$(find example_robot)/config/diagnostics.yaml"/>
     </node>
