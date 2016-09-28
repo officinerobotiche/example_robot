@@ -5,9 +5,9 @@ unav_joint_publisher:
 
 unav_velocity_controller:
   type: "diff_drive_controller/DiffDriveController"
-# In left_wheel and right_wheel you add the motors available in the unav
-  left_wheel: 'motor_0'
-  right_wheel: 'motor_1'
+# In left_wheel and right_wheel you add the motors name_joint in the unav
+  left_wheel: 'left_joint'
+  right_wheel: 'right_joint'
   publish_rate: 50
   pose_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
   twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]

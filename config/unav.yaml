@@ -1,4 +1,5 @@
 motor_0:
+  name_joint: left_joint
   bridge: {PWM_dead_zone: 0.0, PWM_frequency: 1, h_bridge_enable: 0,
       Current_Offset: 0.8425, Current_Gain: 0.0623, 
       volt_gain: 0.0, volt_offset: 12.0}
@@ -13,6 +14,7 @@ motor_0:
   ratio: 30.0
   rotation: 1
 motor_1:
+  name_joint: right_joint
   bridge: {PWM_dead_zone: 0.0, PWM_frequency: 1, h_bridge_enable: 0,
       Current_Offset: 0.8425, Current_Gain: 0.0623, 
       volt_gain: 0.0, volt_offset: 12.0}
